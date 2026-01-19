@@ -1,0 +1,58 @@
+:root {
+    --font-main: 'Montserrat', sans-serif;
+
+    --blue: #3B82F6;
+    --purple: #A855F7;
+    --green: #22C55E;
+    --orange: #F97316;
+    --cyan: #06B6D4;
+    --violet: #8B5CF6;
+
+    --blue-light: #EEF4FF;
+    --purple-light: #FBF3FB;
+    --green-light: #EEFDF4;
+    --orange-light: #FEF5EF;
+    --cyan-light: #EDFAFF;
+    --violet-lightDX: #F7F4FF;
+
+    --accent: #6366F1;
+    --accent-light: #E0E7FF;
+
+    --yellow: #FACC15;
+    --dark-blue: #111827;
+
+    --gray: #f3f4f6;
+    --white: #FFFFFF;
+    --background: #FDFBFF;
+
+    --gradient-indigo: #6467F2;
+    --gradient-purple: #A855F7;
+    --gradient-pink: #EC4899;
+
+    --gradient-primary: linear-gradient(
+            90deg,
+            var(--gradient-indigo) 0%,
+            var(--gradient-purple) 50%,
+            var(--gradient-pink) 100%
+    );
+
+    --transition: 0.25s ease;
+}
+
+::selection {
+    color: var(--accent);
+    background: var(--accent-light);
+}
+picture ::selection, img ::selection {
+    color: transparent !important;
+    background: transparent !important;
+}
+html{
+    background-color: var(--background);
+}
+html,body {
+    font-family: var(--font-main), serif;
+    font-size: 10px;
+    user-select: text;
+}
+

@@ -1,0 +1,14 @@
+@import url(reset.css);
+@import url(root.css);
+@import url(lenis.css);
+@import url(animation.css);
+
+#__nuxt{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+body {
+    position: relative;
+
+}
