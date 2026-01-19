@@ -1,1 +1,56 @@
-{}
+{
+  "login": {
+    "title": "С возвращением",
+    "subTitle": "Пожалуйста, введите данные аккаунта",
+    "emailInput": "Email",
+    "passwordInput": "Пароль",
+    "rememberCheckOut": "Запомнить меня",
+    "forgotPassword": "Забыл пароль",
+    "logInWith": "Ввойти с",
+    "button": "Войти",
+    "errorMessage": "error"
+  },
+  "signup": {
+    "title": "Регистрация",
+    "subTitle": "Создайте новый аккаунт",
+    "nameInput":"Имя",
+    "emailInput": "Email",
+    "passwordInput": "Пароль",
+    "confirmPasswordInput": "Повторите пароль",
+    "passwordMismatch": "Пароли не совподают",
+    "agreeTerms": "Я принимаю условия пользования",
+    "button": "Зарегистрироваться",
+    "signUpWith": "Или регистрация через",
+    "haveAccount": "Уже есть аккаунт?",
+    "loginLink": "Войти",
+    "showPassword": "Показать пароль"
+  },
+  "logInWith": {
+    "title": "Ввойти с",
+    "google": "Войти через Google",
+    "apple": "Войти через Apple"
+  },
+  "signUpWith": {
+    "title": "Зарегистрироваться через",
+    "google": "Зарегистрироваться через Google",
+    "apple": "Зарегистрироваться через Apple"
+  },
+  "contactUs":{
+    "title":"Оставьте сообщение, и мы свяжемся с вами",
+    "subTitle": "Также вы можете написать нам:",
+    "nameInput": "Имя",
+    "emailInput":"Email",
+    "messageTextArea": "Ваше сообщение",
+    "buttonText": "Отправить"
+  },
+  "errors": {
+    "requiredEmail": "Введите email",
+    "emailFormat": "Неверный формат",
+    "requiredPassword":"Введите пароль"
+  },
+  "selectors": {
+    "currencyLabel": "Валюта",
+    "languageLabel": "Язык"
+  },
+  "email": "matseboss-solutions@easy-realm.com"
+}

@@ -2,28 +2,44 @@
     --font-main: 'Montserrat', sans-serif;
 
     --blue: #3B82F6;
-    --purple: #A855F7;
+    --purple: #a855f7;
     --green: #22C55E;
     --orange: #F97316;
     --cyan: #06B6D4;
     --violet: #8B5CF6;
 
-    --blue-light: #EEF4FF;
-    --purple-light: #FBF3FB;
-    --green-light: #EEFDF4;
-    --orange-light: #FEF5EF;
-    --cyan-light: #EDFAFF;
-    --violet-lightDX: #F7F4FF;
+    --blue-light: rgba(59, 130, 246, 0.05);
+    --purple-light: rgba(168, 85, 247, 0.05);
+    --green-light: rgba(34, 197, 94, 0.05);
+    --orange-light: rgba(249, 115, 22, 0.05);
+    --cyan-light: rgba(6, 182, 212, 0.05);
+    --violet-light: rgba(139, 92, 246, 0.05);
 
     --accent: #6366F1;
-    --accent-light: #E0E7FF;
+    --accent-light: rgba(99, 102, 241, 0.05);
 
     --yellow: #FACC15;
     --dark-blue: #111827;
-
+    --light-blue: #1D2841;
     --gray: #f3f4f6;
+
     --white: #FFFFFF;
-    --background: #FDFBFF;
+
+    --text-color: #111827;
+    --text-color-light: rgba(255, 255, 255, 0.6);
+    --text-color-hero: #111827;
+
+    --background: #f9fafb;
+    --background-accent: #FFFFFF;
+    --background-alt: #f3f4f6;
+
+    --input-color: #f3f4f6;
+
+    --border-color: #f3f4f6;
+    --border-color-dark: #b2bdce;
+    --border-color-alt: rgba(0, 0, 0, 0.05);
+
+    --logo-fill: black;
 
     --gradient-indigo: #6467F2;
     --gradient-purple: #A855F7;
@@ -35,10 +51,50 @@
             var(--gradient-purple) 50%,
             var(--gradient-pink) 100%
     );
+    --gradient-button: linear-gradient(
+            320deg,
+            var(--gradient-indigo) 0%,
+            var(--gradient-purple) 100%
+    );
 
     --transition: 0.25s ease;
-}
 
+    --font-size-h1: 5rem;
+    --font-size-logo: 2.2rem;
+    --font-size-title-xxl: 5rem;
+    --font-size-title-l: 3.2rem;
+    --font-size-title-m-l: 2.6rem;
+
+    --font-size-title-m: 2rem;
+    --font-size-title-s: 1.8rem;
+    --font-size-title-xs: 1.2rem;
+    --font-size-h2: 1.8rem;
+    --font-size-text: 1.6rem;
+    --font-size-additional-text: 1.4rem;
+
+    --section-gap: 4rem;
+    --secton-padding: 10rem 6rem;
+    --header-padding: 2rem 6rem;
+    --modal-padding: 4rem
+
+}
+ :root.dark{
+     --background-accent: #111827;
+     --background: #1D2841;
+     --background-alt: #27334C;
+
+     --input-color: #1D2841;
+
+     --border-color: #1F1F21;
+     --border-color-dark: #b2bdce;
+     --border-color-alt: rgba(255, 255, 255, 0.1);
+
+     --text-color: #f9fafb;
+     --text-color-hero: white;
+
+     --logo-fill: white;
+
+}
 ::selection {
     color: var(--accent);
     background: var(--accent-light);
@@ -52,7 +108,53 @@ html{
 }
 html,body {
     font-family: var(--font-main), serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
     font-size: 10px;
     user-select: text;
 }
+p,h1,h2,h3,h4,h5,h6, span,a{
+    transition: 0.3s;
+}
 
+@media screen and (max-width: 1200px){
+    :root{
+        --font-size-h1: 4rem;
+        --font-size-h2: 1.6rem;
+        --font-size-text: 1.4rem;
+        --font-size-title-s: 1.6rem;
+        --font-size-title-m: 1.8rem;
+        --font-size-title-m-l: 2.2rem;
+        --font-size-title-l: 2.8rem;
+        --font-size-title-xxl: 3.5rem;
+
+        --section-gap: 3rem;
+        --secton-padding: 5rem 3rem;
+        --header-padding: 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    :root{
+        --font-size-h1: 3rem;
+        --font-size-h2: 1.4rem;
+        --font-size-text: 1.4rem;
+        --font-size-title-s: 1.4rem;
+        --font-size-title-m: 1.6rem;
+        --font-size-title-m-l: 1.8rem;
+        --font-size-title-l: 2.2rem;
+        --font-size-title-xxl: 2.2rem;
+
+        --section-gap: 2rem;
+        --modal-padding: 2rem
+
+    }
+}
+
+@media screen and (max-width: 600px){
+    :root{
+        --secton-padding: 2.5rem 1.5rem;
+        --header-padding: 2rem 1.5rem;
+
+    }
+}

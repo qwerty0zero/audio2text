@@ -15,11 +15,14 @@
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/hints": "^1.0.0-alpha.5",
     "@nuxt/scripts": "^0.13.2",
+    "@nuxtjs/color-mode": "^4.0.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@unhead/vue": "^2.1.2",
     "eslint": "^9.39.2",
     "nuxt": "^4.2.2",
     "nuxt-i18n-micro": "^2.16.3",
+    "nuxt-svgo": "^4.2.6",
+    "pinia": "^3.0.4",
     "vue": "^3.5.27",
     "vue-router": "^4.6.4"
   }

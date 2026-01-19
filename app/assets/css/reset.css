@@ -10,6 +10,9 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+        position: relative;
+        color: var(--text-color);
+    overflow-x: hidden;
 }
 
 img,
@@ -24,7 +27,7 @@ svg {
 input,
 button,
 textarea,
-select {
+select, hr {
     font: inherit;
     outline: none;
     border: none;
@@ -39,4 +42,7 @@ a {
 
 ul, ol {
     list-style: none;
+}
+.nuxt-icon{
+    margin: 0 !important;
 }

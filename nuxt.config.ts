@@ -4,24 +4,33 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxt/a11y',
     '@nuxt/eslint',
     '@nuxt/hints',
     '@nuxt/scripts',
-      'nuxt-i18n-micro',
-      '@nuxtjs/google-fonts'
+    'nuxt-i18n-micro',
+    '@nuxtjs/google-fonts',
+    'nuxt-svgo',
+    'lenis/nuxt',
+    '@nuxtjs/color-mode',
   ],
+    app: {
+        header: {
+            link: [
+                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        },
+    },
     css: [
         "@/assets/css/main.css"
     ],
     i18n: {
         locales: [
             // { code: 'en', iso: 'en-US', dir: 'ltr' },
-            { code: 'ru', iso: 'ru-RU', dir: 'ltr',  displayName: 'English'  },
+            { code: 'ru', iso: 'ru-RU', dir: 'ltr',  displayName: 'Русский'  },
             // { code: 'pl', iso: 'pl-PL', dir: 'rtl' },
         ],
         defaultLocale: 'ru',
-        strategy: 'prefix_and_default',
+        strategy: 'prefix',
         translationDir: 'locales',
         meta: true,
     },

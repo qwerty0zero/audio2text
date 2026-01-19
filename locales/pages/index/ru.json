@@ -4,47 +4,62 @@
      "navigation": [
        {
          "title": "Возможности",
-         "link": ""
+         "to": "feature",
+         "localScroll": true
        },
        {
          "title": "Тарифы",
-         "link": ""
+         "to": "price_plan",
+         "localScroll": true
+
        },
        {
          "title": "Как работает",
-         "link": ""
+         "to": "stage",
+         "localScroll": true
+
        },
        {
          "title": "FAQ",
-         "link": ""
+         "to": "faq",
+         "localScroll": true
        }
      ],
      "buttons": [
        {
          "text": "Войти",
-         "link": ""
+         "type": "button",
+         "action": "logIn",
+         "class": "secondary"
        },
        {
          "text": "Начать",
-         "link": ""
+         "type": "button",
+         "action": "signUp",
+         "class": "primary"
        }
      ]
    },
    "main": {
-     "title": "Превратите аудио\nв текст за\nсекунды",
+     "title": ["Превратите аудио", "в текст за", "секунды"],
+
      "description": "Автоматическая расшифровка аудио и видео с поддержкой 50+ языков. Быстро, точно и безопасно.",
+     "additional_info": "Точность распознавания 98%",
      "buttons": [
        {
          "text": "Попробовать бесплатно",
-         "link": ""
+         "type": "button",
+         "class": "primary",
+         "action": "startForFree"
        },
        {
          "text": "Узнать больше",
-         "link": ""
+         "to": "stage",
+         "localScroll": true,
+         "class": "outline"
        }
      ],
      "info": [
-       "Точность распознавания 98%",
        "Без кредитной карты",
        "30 минут бесплатно"
      ],
@@ -74,11 +89,17 @@
        "buttons": [
          {
            "text": "Скачать текст",
-           "link": ""
+           "type": "button",
+           "class": "primary full_width row_group",
+           "action": "downloadExample",
+           "svgLink": "download"
          },
          {
-           "text": "",
-           "link": ""
+           "svgLink": "/icons/share.svg",
+           "type": "button",
+           "class": "secondary outline square",
+           "action": "shareExample",
+           "ariaLabel": "Поделиться"
          }
        ],
        "info": {
@@ -94,32 +115,38 @@
        {
          "title": "50+ языков",
          "description": "Поддержка русского, английского, испанского и еще 47 языков с автоопределением",
-         "svgLink": ""
+         "svgLink": "/icons/feature-cards/translate.svg",
+         "color": "blue"
        },
        {
          "title": "Временные метки",
          "description": "Точные таймкоды для каждого фрагмента текста с возможностью навигации",
-         "svgLink": ""
+         "color": "purple",
+         "svgLink": "/icons/feature-cards/clock.svg"
        },
        {
          "title": "Распознавание спикеров",
          "description": "Автоматическое разделение речи разных людей в диалогах и конференциях",
-         "svgLink": ""
+         "color": "green",
+         "svgLink": "/icons/feature-cards/users.svg"
        },
        {
          "title": "Множество форматов",
          "description": "Экспорт в ТХТ, DOCX, PDF, SRT, VTТ и другие популярные форматы",
-         "svgLink": ""
+         "color": "orange",
+         "svgLink": "/icons/feature-cards/export.svg"
        },
        {
          "title": "Безопасность данных",
          "description": "Шифрование на всех этапах, автоудаление файлов, соответствие GDPR текста",
-         "svgLink": ""
+         "color": "cyan",
+         "svgLink": "/icons/feature-cards/shield.svg"
        },
        {
          "title": "Редактор ",
          "description": "Встроенный редактор для быстрой корректировки и форматирования текста",
-         "svgLink": ""
+         "color": "violet",
+         "svgLink": "/icons/feature-cards/edit.svg"
        }
      ]
    },
@@ -129,7 +156,7 @@
      "plan": [
          {
            "title": "Бесплатный",
-           "price": "",
+           "plan": "basic",
            "description": "30 минут в месяц",
            "feature": [
              {
@@ -155,13 +182,15 @@
            ],
            "button": {
              "text": "Начать бесплатно",
-             "link": ""
+             "action": "startForFree",
+             "type": "button",
+             "class": "secondary full_width"
            }
          },
        {
          "title": "Профессиональный",
          "subTitle": "Популярный",
-         "price": "",
+         "plan": "pro",
          "description": "600 минут в месяц",
          "feature": [
            {
@@ -191,12 +220,15 @@
          ],
          "button": {
            "text": "Выбрать план",
-           "link": ""
-         }
+           "action": "choosePlan",
+           "type": "button",
+           "class": "primary full_width"
+         },
+         "class": "primary"
        },
        {
          "title": "Бизнес",
-         "price": "",
+         "plan": "business",
          "description": "3000 минут в месяц",
          "feature": [
            {
@@ -226,7 +258,10 @@
          ],
          "button": {
            "text": "Связаться с нами",
-           "link": ""
+           "action": "contactUs",
+           "type": "button",
+           "class": "dark_blue full_width"
+
          }
        }
        ]
@@ -238,17 +273,22 @@
        {
          "title": "Загрузите файл",
          "description": "Перетащите аудио или видео файл или выберите с компьютера. Поддержка МР3, WAV, МР4 и других форматов",
-         "svgLink": ""
+         "svgLink": "cloud",
+         "scgColor": "gradient-indigo"
        },
        {
          "title": "Обработка AI",
          "description": "Наша нейросеть автоматически распознает речь, определяет язык и расставляет пунктуацию",
-         "svgLink": ""
+         "svgLink": "download",
+         "scgColor": "gradient-purple"
+
        },
        {
          "title": "Получите результат",
          "description": "Редактируйте текст в браузере и скачивайте в удобном формате. Готово!",
-         "svgLink": ""
+         "svgLink": "magic",
+         "scgColor": "gradient-pink"
+
        }
      ]
    },
@@ -284,11 +324,15 @@
      "buttons": [
        {
          "text": "Попробовать бесплатно",
-         "link": ""
+         "action": "startForFree",
+         "type": "button",
+         "class": "primary"
        },
        {
          "text": "Смотреть тарифы",
-         "link": ""
+         "to": "price_plan",
+         "localScroll": true,
+         "class": "outline"
        }
      ]
    },
