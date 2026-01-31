@@ -2,6 +2,7 @@
 import CloudIcon from "~/assets/icons/stage-cards/cloud.svg"
 import DownloadIcon from "~/assets/icons/stage-cards/download.svg"
 import MagicIcon from "~/assets/icons/stage-cards/magic.svg"
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<{
   tag?: string;
@@ -15,27 +16,33 @@ const props = withDefaults(defineProps<{
   tag: 'article'
 })
 
-const isIconKey = (link: string) => {
-  return ['cloud', 'download', 'magic'].includes(link)
+const VALID_ICON_KEYS = new Set(['cloud', 'download', 'magic']);
+const ICON_MAP: Record<string, any> = {
+  cloud: CloudIcon,
+  download: DownloadIcon,
+  magic: MagicIcon
+} as const;
+
+const isIconKey = (link?: string): link is string => {
+  return !!link && VALID_ICON_KEYS.has(link);
 }
 
 const getIconComponent = (key: string) => {
-  const map: Record<string, any> = {
-    cloud: CloudIcon,
-    download: DownloadIcon,
-    magic: MagicIcon
-  }
-  return map[key]
+  return ICON_MAP[key];
 }
+
+const cardStyle = computed(() => ({
+  backgroundColor: props.element.color
+      ? `var(--${props.element.color}-light)`
+      : 'var(--background-accent)'
+}));
 </script>
 <template>
   <component
       :is="tag"
       class="base_card one_time_animation fade_up"
       v-observe-visibility :data-delay="50"
-      :style="{
-      backgroundColor: element.color ? `var(--${element.color}-light)` : 'var(--background-accent)'
-    }"
+      :style="cardStyle"
   >
     <component
         v-if="isIconKey(element.svgLink)"
@@ -90,10 +97,6 @@ h3{
 img{
   width: 3.2rem;
 }
-
-
-
-
 
 @media screen and (max-width: 1200px){
   .card_icon{

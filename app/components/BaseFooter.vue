@@ -197,11 +197,6 @@ footer :deep(select){
   color: var(--white);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
-footer :deep(select){
-  background-color: var(--light-blue);
-  color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-}
 footer :deep(select:is(:hover, :active, :focus)){
   background-color: var(--dark-blue);
 

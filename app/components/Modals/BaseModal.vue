@@ -64,7 +64,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleEsc));
   align-items: center;
   justify-content: center;
 
-  font-weight: bold;
+  font-weight: 700;
 
   right: 1rem;
   top: 1rem;
@@ -76,9 +76,6 @@ onUnmounted(() => window.removeEventListener('keydown', handleEsc));
   flex-direction: column;
   gap: 1.5rem;
 }
-
-.title { font-size: var(--font-size-title-m-l); font-weight: bold; margin-bottom: 0.5rem; }
-.subtitle { font-size:var(--font-size-text); }
 
 form {
   display: flex; flex-direction: column;

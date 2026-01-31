@@ -7,6 +7,7 @@ import BaseTextArea from "~/components/Forms/BaseTextArea.vue";
 import * as validators from "~/utils/validators";
 import BaseButton from "~/components/UI/BaseButton.vue";
 import {actionDispatcher} from "~/core/actions/dispatcher";
+import ModalHeader from "~/components/Modals/ModalHeader.vue";
 
 const { $t } = useI18n()
 
@@ -38,10 +39,7 @@ const submit = () => {
 <template>
   <BaseModal>
     <div class="modal-container">
-      <div class="welcome_block">
-        <p class="title">{{ $t('contactUs.title') }}</p>
-        <p class="subtitle">{{ $t('contactUs.subTitle') }}</p>
-      </div>
+      <ModalHeader title-key="contactUs.title" subtitle-key="contactUs.subTitle" />
 
       <form class="contact-form" @submit.prevent="submit">
         <BaseInput

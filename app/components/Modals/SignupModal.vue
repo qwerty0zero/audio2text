@@ -1,10 +1,7 @@
 <template>
   <BaseModal>
     <div class="modal-container">
-      <div class="welcome_block">
-        <p class="title">{{ $t('signup.title') }}</p>
-        <p class="subtitle">{{ $t('signup.subTitle') }}</p>
-      </div>
+      <ModalHeader title-key="signup.title" subtitle-key="signup.subTitle" />
 
       <form class="login-form" @submit.prevent="submit">
         <BaseInput
@@ -107,6 +104,7 @@ import * as validators from "~/utils/validators";
 
 
 import AutrorizationVia from "~/components/Forms/AutrorizationVia.vue";
+import ModalHeader from "~/components/Modals/ModalHeader.vue";
 
 const { $t } = useI18n();
 

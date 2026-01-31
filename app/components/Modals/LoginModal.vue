@@ -1,11 +1,7 @@
 <template>
   <BaseModal>
     <div class="modal-container">
-      <div class="welcome_block">
-        <p class="title">{{ $t('login.title') }}</p>
-        <p class="subtitle">{{ $t('login.subTitle') }}</p>
-      </div>
-
+      <ModalHeader title-key="login.title" subtitle-key="login.subTitle" />
       <form class="login-form" @submit.prevent="submit">
 
         <BaseInput
@@ -74,6 +70,7 @@ import AutrorizationVia from "~/components/Forms/AutrorizationVia.vue";
 import * as validators from "~/utils/validators";
 import BaseButton from "~/components/UI/BaseButton.vue";
 import {actionDispatcher} from "~/core/actions/dispatcher";
+import ModalHeader from "~/components/Modals/ModalHeader.vue";
 const { $t } = useI18n()
 
 const form = reactive({

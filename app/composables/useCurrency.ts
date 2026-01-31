@@ -6,7 +6,7 @@ const RATES = {
     USD: 0.011,
     EUR: 0.010,
     PLN: 0.044
-};
+} as const;
 
 const CURRENCIES = {
     USD: { code: 'USD', symbol: '$', locale: 'en-US' },
@@ -14,6 +14,8 @@ const CURRENCIES = {
     PLN: { code: 'PLN', symbol: 'zł', locale: 'pl-PL' },
     RUB: { code: 'RUB', symbol: '₽', locale: 'ru-RU' },
 } as const;
+
+const ALL_CURRENCIES = Object.values(CURRENCIES);
 
 type CurrencyCode = keyof typeof CURRENCIES;
 
@@ -53,11 +55,15 @@ export const useCurrency = () => {
         }
     }
 
-    watch(() => route.query.currency, (newVal) => {
+    watch(() => route.query.currency, (newVal, oldVal) => {
+        if (newVal === oldVal) return;
+
         if (typeof newVal === 'string' && newVal in CURRENCIES) {
             const validCode = newVal as CurrencyCode
-            currency.value = validCode
-            currencyCookie.value = validCode
+            if (currency.value !== validCode) {
+                currency.value = validCode
+                currencyCookie.value = validCode
+            }
         }
     })
 
@@ -82,7 +88,7 @@ export const useCurrency = () => {
 
     return {
         currency: computed(() => currency.value),
-        allCurrencies: Object.values(CURRENCIES),
+        allCurrencies: ALL_CURRENCIES,
         setCurrency,
         detectCurrency,
         convertAndFormat

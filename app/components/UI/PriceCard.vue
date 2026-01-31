@@ -99,7 +99,7 @@ h3{
 }
 .description span{
   font-size: var(--font-size-title-xxl);
-  font-weight: bold;
+  font-weight: 700;
 }
 .sub_title{
   position: absolute;

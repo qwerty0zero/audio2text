@@ -98,7 +98,7 @@ const handleClick = (e: Event) => {
   border-radius: 0.5rem;
   cursor: pointer;
   background-color: transparent;
-  font-weight: bold;
+  font-weight: 700;
   border: 0.2rem solid transparent;
   text-align: center;
   text-decoration: none;

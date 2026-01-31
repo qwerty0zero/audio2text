@@ -21,7 +21,10 @@ export function useNotifications() {
     }
 
     const remove = (id: number) => {
-        notifications.value = notifications.value.filter(n => n.id !== id)
+        const index = notifications.value.findIndex(n => n.id === id);
+        if (index > -1) {
+            notifications.value.splice(index, 1);
+        }
     }
 
     return {

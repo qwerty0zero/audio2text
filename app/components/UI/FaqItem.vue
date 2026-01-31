@@ -37,7 +37,7 @@ const props = defineProps<{
   cursor: default;
   outline: none;
   font-size: var(--font-size-title-m);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .faq_block summary::-webkit-details-marker {

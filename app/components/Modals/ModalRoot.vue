@@ -10,20 +10,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, defineAsyncComponent } from 'vue';
 import { useModal } from '~/composables/useModal';
 
-import LoginModal from './LoginModal.vue';
-import SignupModal from './SignupModal.vue';
-import ContactUsModal from "./ContactUsModal.vue";
+const modalsMap = {
+  login: defineAsyncComponent(() => import('./LoginModal.vue')),
+  signup: defineAsyncComponent(() => import('./SignupModal.vue')),
+  contact: defineAsyncComponent(() => import('./ContactUsModal.vue')),
+} as const;
 
 const { currentModal, isOpen } = useModal();
-
-const modalsMap = {
-  login: LoginModal,
-  signup: SignupModal,
-  contact: ContactUsModal,
-};
 
 const activeComponent = computed(() => {
   return currentModal.value ? modalsMap[currentModal.value] : null;

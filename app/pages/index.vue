@@ -130,7 +130,7 @@ useHead({
 }
 .cards_stage span{
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   font-size: var(--font-size-title-m-l);
   margin: 0 auto;
   width: 8rem;

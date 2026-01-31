@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from '#imports'
-import HeaderNavDesktop from "~/components/header/HeaderNavDesktop.vue";
+import HeaderNavDesktop from "~/components/Header/HeaderNavDesktop.vue";
 import BaseSideMenu from "~/components/UI/BaseSideMenu.vue";
 import BaseButton from "~/components/UI/BaseButton.vue";
 import BurgerButton from "~/components/Header/BurgerButton.vue";
@@ -16,7 +16,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header itemscope itemtype="https://schema.org/WPHeader">
+  <header itemscope itemtype="https://schema.org/WPHeader" class="fade_up"  v-observe-visibility>
     <BaseButton :data="{to: 'hero',localScroll: true}">
       <div class="header_title">
         <span class="title_image">
