@@ -6,6 +6,15 @@
     padding: 0;
 }
 
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
 img,
 picture,
 video,
@@ -31,8 +40,9 @@ a {
     text-decoration: none;
 }
 
-ul, ol, li {
+ul, ol {
     list-style: none;
-    padding: 0;
-    margin: 0;
+}
+.nuxt-icon{
+    margin: 0 !important;
 }
