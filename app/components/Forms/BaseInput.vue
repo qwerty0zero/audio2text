@@ -44,7 +44,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue';
 import HidePasswordIcon from "~/assets/icons/input-icon/hidePassword.svg"
-import ShowPasswordIcon from "~/assets/icons/input-icon/ShowPassword.svg"
+import ShowPasswordIcon from "~/assets/icons/input-icon/showPassword.svg"
 
 type Validator = (val: string) => boolean | string;
 
