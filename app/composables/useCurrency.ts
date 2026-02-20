@@ -2,17 +2,17 @@ import { computed, watch } from 'vue'
 import { useRoute, useRouter, useCookie, useState } from '#app'
 
 const RATES = {
-    RUB: 1,
-    USD: 0.011,
-    EUR: 0.010,
-    PLN: 0.044
+    UAH: 1,
+    USD: 0.023,
+    EUR: 0.020,
+    PLN: 0.083
 } as const;
 
 const CURRENCIES = {
     USD: { code: 'USD', symbol: '$', locale: 'en-US' },
     EUR: { code: 'EUR', symbol: '€', locale: 'de-DE' },
     PLN: { code: 'PLN', symbol: 'zł', locale: 'pl-PL' },
-    RUB: { code: 'RUB', symbol: '₽', locale: 'ru-RU' },
+    UAH: { code: 'UAH', symbol: '₴', locale: 'ru-RU' },
 } as const;
 
 const ALL_CURRENCIES = Object.values(CURRENCIES);
@@ -49,7 +49,7 @@ export const useCurrency = () => {
         } else if (import.meta.client) {
             const userLang = navigator.language.toLowerCase()
             if (userLang.includes('pl')) targetCurrency = 'PLN'
-            else if (userLang.includes('ru') || userLang.includes('be')) targetCurrency = 'RUB'
+            else if (userLang.includes('ru') || userLang.includes('be')) targetCurrency = 'UAH'
             else if (userLang.includes('de') || userLang.includes('fr')) targetCurrency = 'EUR'
             setCurrency(targetCurrency)
         }
